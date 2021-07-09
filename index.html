@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0; 
+    padding: 0; 
+  }
+  .wrapper {
+    width: 100vw;
+    height: 100vh; 
+    background-color: #f2395a;
+    background-image: linear-gradient(
+                      45deg,
+                      rgba(255,255,255,0.15) 25%,
+                      rgba(0,0,0,0) 25%,
+                      rgba(0,0,0,0) 50%,
+                      rgba(255,255,255,0.15) 50%, 
+                      rgba(255,255,255,0.15) 75%, 
+                      rgba(0,0,0,0) 75%
+
+                      );
+    background-size: 150px 150px; 
+  }
+  section {
+
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 20px; 
+    background-color: #efefef;
+  }
+
+  .register-wrapper {
+    background-image: linear-gradient(135deg, #0eeff0 30%, #008f90 90%);
+    position: relative; 
+    z-index: 3; 
+    padding: 40px 100px;  
+    color: #999; 
+    /* border: 1px solid red;  */
+    font-size: 1rem; 
+  }
+
+  .register-wrapper * {
+    box-sizing: border-box;
+  }
+
+  .register-wrapper form input {
+    display: inline-block; 
+    width: 100%; 
+    padding: 0 20px; 
+    line-height: 50px; 
+    height: 50px; 
+    border: solid 1px #e6e6e6;
+    border-bottom-width: 3px; 
+    border-radius: 5px; 
+    background: white; 
+    transition: all .3s ease; 
+    outline: none; 
+  }
+
+  .register-wrapper form input:not(:last-child) {
+    margin-bottom: 20px; 
+  }
+
+  .register-wrapper form input[type="email"]:focus, 
+  .register-wrapper form input[type="email"]:active, 
+  .register-wrapper form input[type="password"]:focus, 
+  .register-wrapper form input[type="password"]:active {
+    border-color: #ccc; 
+  } 
+
+  .register-wrapper form input[type="submit"] {
+    position: relative; 
+    z-index:1; 
+    padding: 0 20px; 
+    display: inline-block; 
+    background-color: #f2395a;
+
+    background-size: 30px 30px; 
+    background-image: linear-gradient(
+                      45deg, 
+                      rgba(255,255,255, 0.15) 25%, 
+                      rgba(0,0,0,0) 25%, 
+                      rgba(0,0,0,0) 50%,
+                      rgba(255,255,255, 0.15) 50%, 
+                      rgba(255,255,255, 0.15) 75%, 
+                      rgba(0,0,0,0) 75%
+                      ); 
+    border: 1px solid #f02146; 
+    border-bottom-width: 2px; 
+    color: white; 
+    outline: none; 
+    cursor: pointer; 
+    transition: all .3 ease;                 
+  }
+
+  .register-wrapper form input[type="submit"]:hover {
+    background-size: 45px 45px;
+  }
+
+  .register-title {
+    font-size: 1.5rem; 
+    padding-bottom: 20px; 
+    margin: 0 0 20px; 
+    border-bottom: dashed 1px #6e6e6e;
+  }
+
+  
+  .register-block {
+    /* border: 1px solid black;  */
+    position: relative; 
+    display: block; 
+    width: 100%; 
+    max-width: 300px; 
+    margin: 0 auto; 
+    padding: 30px; 
+    background: white; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.2); 
+    border-radius: 5px; 
+  }
+
+
+</style>
+<body>
+  <div class="wrapper">
+    <section>
+      <div class="register-wrapper">
+        <div class="register-block">
+          <p class="register-title">Quickly &amp; easily create an account using the form</p>
+          <form action="">
+            <input type="email" placeholder="Enter you email"/>
+            <input type="password" placeholder="Enter your pass"/>
+            <input type="submit" value="Create my account"/>
+          </form>
+        </div>
+      </div>
+      </section>
+  </div>
+</body>
+</html>
